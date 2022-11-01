@@ -23,6 +23,8 @@ CI, so you can always quickly see lint issues _before_ pushing your changes.
 
 ## Get Started
 
+SAMPLE COMMIT
+
 Before setting up running Trunk Check on CI, you'll need to initialize trunk in your repo.
 Initializing it (`trunk init`) bootstraps a the trunk configuration (`.trunk/trunk.yaml`) which
 stores all the configuration for Trunk. All linters and formatters, as well as the version of Trunk
