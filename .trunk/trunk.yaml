@@ -21,9 +21,7 @@ lint:
     - shfmt@3.5.0
 merge:
   required_statuses:
-    - Trunk Check
-    - Unit tests & test coverage
-    - Integration tests
+    - Trunk Check Runner
 actions:
   enabled:
     - trunk-upgrade-available
