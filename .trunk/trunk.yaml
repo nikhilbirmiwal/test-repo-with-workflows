@@ -8,8 +8,8 @@ cli:
 repo:
   repo:
     host: github.com
-    owner: trunk-io
-    name: trunk-action
+    owner: nikhilbirmiwal
+    name: test-repo-with-workflows
 lint:
   enabled:
     - git-diff-check
