@@ -1,6 +1,10 @@
 version: 0.1
+runtimes:
+  enabled:
+    - go@1.18.3
+    - node@16.14.2
 cli:
-  version: 0.18.1-beta
+  version: 1.5.1
 repo:
   repo:
     host: github.com
@@ -8,9 +12,23 @@ repo:
     name: trunk-action
 lint:
   enabled:
-    - actionlint@1.6.12
-    - gitleaks@8.8.4
-    - markdownlint@0.31.1
-    - prettier@2.6.2
-    - shellcheck@0.8.0
-    - shfmt@3.4.0
+    - git-diff-check
+    - actionlint@1.6.23
+    - gitleaks@8.16.0
+    - markdownlint@0.33.0
+    - prettier@2.8.4
+    - shellcheck@0.9.0
+    - shfmt@3.5.0
+merge:
+  required_statuses:
+    - Trunk Check
+    - Unit tests & test coverage
+    - Integration tests
+actions:
+  enabled:
+    - trunk-upgrade-available
+plugins:
+  sources:
+    - id: trunk
+      ref: v0.0.12
+      uri: https://github.com/trunk-io/plugins
