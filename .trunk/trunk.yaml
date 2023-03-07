@@ -8,8 +8,8 @@ cli:
 repo:
   repo:
     host: github.com
-    owner: trunk-io
-    name: trunk-action
+    owner: nikhilbirmiwal
+    name: test-repo-with-workflows
 lint:
   enabled:
     - git-diff-check
@@ -21,9 +21,7 @@ lint:
     - shfmt@3.5.0
 merge:
   required_statuses:
-    - Trunk Check
-    - Unit tests & test coverage
-    - Integration tests
+    - Echo test
 actions:
   enabled:
     - trunk-upgrade-available
