@@ -1,17 +1,20 @@
 name: Pull Request
-on: [pull_request, workflow_dispatch]
-concurrency:
-  group: ${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true
+run-name: Pull Request for ${{ github.ref_name }} by ${{ github.actor }}
+
+on:
+  pull_request: {}
+  workflow_dispatch: {}
+  push:
+    branches:
+      - trunk-merge/**
+
+# Allows the automerge bot PR job to comment on dependabot PRs
+permissions: write-all
 
 jobs:
-  trunk_check:
-    name: Trunk Check Runner
+  noop:
     runs-on: ubuntu-latest
-
+    name: Echo test
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Trunk Check
-        uses: ./ # external users, use: trunk-io/trunk-action@v1
+      - name: Echo foo
+        run: echo foo

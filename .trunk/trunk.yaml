@@ -21,7 +21,7 @@ lint:
     - shfmt@3.5.0
 merge:
   required_statuses:
-    - Trunk Check Runner
+    - Echo test
 actions:
   enabled:
     - trunk-upgrade-available
