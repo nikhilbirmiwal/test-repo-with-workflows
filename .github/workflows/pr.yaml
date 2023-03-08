@@ -15,4 +15,4 @@ jobs:
         uses: trunk-io/trunk-action@v1
 
       - name: Nikhil Action
-        uses: actions/nikhilbirmiwal/affected-targets-actions@v1
+        uses: nikhilbirmiwal/affected-targets-actions@v2
