@@ -11,6 +11,5 @@ jobs:
       - name: Checkout ${{ github.ref_name }}
         uses: actions/checkout@v2
 
-      - name: nbirmiwal/idenity-affected-targets
-        uses: nikhilbirmiwal/affected-targets-actions@v1
-
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1
