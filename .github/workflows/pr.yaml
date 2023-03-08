@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: nikhilbirmiwal/affected-targets-actions@v4
+        uses: nikhilbirmiwal/affected-targets-actions@v5
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
