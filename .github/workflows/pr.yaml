@@ -16,5 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Nikhil Job
     steps:
-      - name: Nikhil Job
-        run: actions/affected-targets-actions@v0
+      - name: nbirmiwal/idenity-affected-targets
+        uses: nikhilbirmiwal/affected-targets-actions@v0
+
