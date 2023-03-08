@@ -1,15 +1,7 @@
 name: Pull Request
 run-name: Pull Request for ${{ github.ref_name }} by ${{ github.actor }}
 
-on:
-  pull_request: {}
-  workflow_dispatch: {}
-  push:
-    branches:
-      - trunk-merge/**
-
-# Allows the automerge bot PR job to comment on dependabot PRs
-permissions: write-all
+on: [push]
 
 jobs:
   nikhil-job:
