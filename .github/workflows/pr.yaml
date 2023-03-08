@@ -14,6 +14,5 @@ jobs:
       - name: Trunk Check
         uses: trunk-io/trunk-action@v1
 
-      - name: nbirmiwal/idenity-affected-targets
-        uses: nikhilbirmiwal/affected-targets-actions@v1
-
+      - name: Nikhil Action
+        uses: actions/nikhilbirmiwal/affected-targets-actions@v1
