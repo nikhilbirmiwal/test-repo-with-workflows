@@ -12,9 +12,9 @@ on:
 permissions: write-all
 
 jobs:
-  noop:
+  nikhil-job:
     runs-on: ubuntu-latest
-    name: Echo test
+    name: Nikhil Job
     steps:
-      - name: Echo foo
-        run: echo foo
+      - name: Nikhil Job
+        run: actions/affected-targets-actions@v0
