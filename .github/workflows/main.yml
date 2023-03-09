@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: Run bazel-diff on this command
+    name: Run bazel-diff on this commit
     steps:
       - name: Checkout Customer Repo
         uses: actions/checkout@v3
@@ -17,4 +17,4 @@ jobs:
         shell: bash
       
       - name: Run Upload Affected Targets
-        uses: nikhilbirmiwal/hello-world-composite-action@v30
+        uses: nikhilbirmiwal/hello-world-composite-action@v31
