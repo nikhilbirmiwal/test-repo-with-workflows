@@ -1,4 +1,4 @@
-on: pull_request 
+on: pull_request
 
 jobs:
   hello_world_job:
@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Where am I?
-        run: pwd 
+        run: pwd
         shell: bash
 
       - name: What's around me?
@@ -20,12 +20,12 @@ jobs:
         run: echo '${{ toJSON(github) }}'
 
       - name: Expected New Hash
-        run: echo ${{ github.pull_request.sha }}
+        run: echo ${{ github.event.pull_request.head.sha }}
         shell: bash
 
       - name: Expected Old Hash
-        run: echo ${{ github.base.sha }}
+        run: echo ${{ github.event.pull_request.base.sha }}
         shell: bash
-      
+
       - name: Run Upload Affected Targets
         uses: nikhilbirmiwal/hello-world-composite-action@v35
