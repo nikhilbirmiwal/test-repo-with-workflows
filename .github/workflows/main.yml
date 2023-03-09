@@ -15,6 +15,14 @@ jobs:
       - name: What's around me?
         run: find .
         shell: bash
+
+      - name: Expected New Hash
+        run: echo ${{ github.head_ref }}
+        shell: bash
+
+      - name: Expected Old Hash
+        run: echo ${{ github.base_ref }}
+        shell: bash
       
       - name: Run Upload Affected Targets
-        uses: nikhilbirmiwal/hello-world-composite-action@v34
+        uses: nikhilbirmiwal/hello-world-composite-action@v35
