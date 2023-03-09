@@ -20,11 +20,11 @@ jobs:
         run: echo '${{ toJSON(github) }}'
 
       - name: Expected New Hash
-        run: echo ${{ github.sha }}
+        run: echo ${{ github.pull_request.sha }}
         shell: bash
 
       - name: Expected Old Hash
-        run: echo ${{ github.base_ref }}
+        run: echo ${{ github.base.sha }}
         shell: bash
       
       - name: Run Upload Affected Targets
