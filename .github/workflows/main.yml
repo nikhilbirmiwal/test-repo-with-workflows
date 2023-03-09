@@ -5,6 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     name: Run bazel-diff on this command
     steps:
-      - uses: actions/checkout@v3
-      - id: foo
+      - name: Checkout Customer Repo
+        uses: actions/checkout@v3
+
+      - name: Where am I?
+        run: pwd 
+        shell: bash
+
+      - name: What's around me?
+        run: find .
+        shell: bash
+      
+      - name: Run Upload Affected Targets
         uses: nikhilbirmiwal/hello-world-composite-action@v27
