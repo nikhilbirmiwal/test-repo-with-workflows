@@ -16,6 +16,9 @@ jobs:
         run: find .
         shell: bash
 
+      - name: Github Context
+        run: echo '${{ toJSON(github) }}'
+
       - name: Expected New Hash
         run: echo ${{ github.sha }}
         shell: bash
