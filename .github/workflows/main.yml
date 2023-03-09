@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: nikhilbirmiwal/hello-world-composite-action@v7
+        uses: nikhilbirmiwal/hello-world-composite-action@v8
