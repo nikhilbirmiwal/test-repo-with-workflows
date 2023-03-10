@@ -3,7 +3,7 @@ on: pull_request
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: Run bazel-diff for ${{ github.event.pull_request.number }}
+    name: Upload Affected Targets for PR ${{ github.event.pull_request.number }}
     steps:
       - name: Checkout Customer Repo
         uses: actions/checkout@v3
