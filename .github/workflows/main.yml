@@ -17,7 +17,7 @@ jobs:
         shell: bash
 
       - name: Github Context
-        run: echo ${{ toJSON(github )}}
+        run: echo ${{ toJSON(github) }}
 
       - name: Run Upload Affected Targets
         uses: nikhilbirmiwal/hello-world-composite-action@v2
