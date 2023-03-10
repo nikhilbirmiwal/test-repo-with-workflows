@@ -1,7 +1,7 @@
 on: pull_request
 
 jobs:
-  hello_world_job:
+  upload_affected_targets:
     runs-on: ubuntu-latest
     name: Upload Affected Targets for PR ${{ github.event.pull_request.number }}
     steps:
@@ -17,4 +17,4 @@ jobs:
         shell: bash
 
       - name: Run Upload Affected Targets
-        uses: nikhilbirmiwal/hello-world-composite-action@v1
+        uses: nikhilbirmiwal/hello-world-composite-action@v2
