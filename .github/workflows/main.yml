@@ -8,17 +8,6 @@ jobs:
       - name: Checkout Customer Repo
         uses: actions/checkout@v3
 
-      - name: Where am I?
-        run: pwd
-        shell: bash
-
-      - name: What's around me?
-        run: find .
-        shell: bash
-
-      - name: Github Context
-        run: echo '${{ toJSON(github) }}'
-
       - name: Expected New Hash
         run: echo ${{ github.event.pull_request.head.sha }}
         shell: bash
