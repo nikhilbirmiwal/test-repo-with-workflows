@@ -17,4 +17,4 @@ jobs:
         shell: bash
 
       - name: Run Upload Affected Targets
-        uses: nikhilbirmiwal/hello-world-composite-action@v11
+        uses: nikhilbirmiwal/hello-world-composite-action@v12
