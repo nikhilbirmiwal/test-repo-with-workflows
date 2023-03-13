@@ -1,20 +1,14 @@
+name: Upload Affected Targets
 on: pull_request
 
 jobs:
   upload_affected_targets:
-    runs-on: ubuntu-latest
-    name: Upload Affected Targets for PR ${{ github.event.pull_request.number }}
+    name: Upload Affected Targets
+    runs-on: self-hosted
+
     steps:
-      - name: Checkout Customer Repo
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Expected New Hash
-        run: echo ${{ github.event.pull_request.head.sha }}
-        shell: bash
-
-      - name: Expected Old Hash
-        run: echo ${{ github.event.pull_request.base.sha }}
-        shell: bash
-
       - name: Run Upload Affected Targets
-        uses: nikhilbirmiwal/hello-world-composite-action@v39
+        uses: nikhilbirmiwal/hello-world-composite-action@v41 # TODO: Move this to a different repo.
