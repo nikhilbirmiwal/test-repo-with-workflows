@@ -1,20 +1,14 @@
-on: pull_request 
+name: Upload Affected Targets
+on: pull_request
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: Run bazel-diff on this commit
+  upload_affected_targets:
+    name: Upload Affected Targets
+    runs-on: self-hosted
+
     steps:
-      - name: Checkout Customer Repo
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Where am I?
-        run: pwd 
-        shell: bash
-
-      - name: What's around me?
-        run: find .
-        shell: bash
-      
       - name: Run Upload Affected Targets
-        uses: nikhilbirmiwal/hello-world-composite-action@v38
+        uses: nikhilbirmiwal/hello-world-composite-action@v47 # TODO: Move this to a different repo.
